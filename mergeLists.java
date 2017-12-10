@@ -17,17 +17,16 @@ Node mergeLists(Node headA, Node headB) {
     {                  
        a = headA;
        prev = null;
+       Node n = new Node();        
        do{
            if(a != null){
-               if(b.data < a.data && prev == null){
-                   Node n = new Node();
+               if(b.data < a.data && prev == null){                   
                    n.data =  b.data;
                    n.next = a;                   
                    headA = n;
                    break;
                }
-               else if(b.data < a.data && prev != null){
-                  Node n = new Node();
+               else if(b.data < a.data && prev != null){                  
                   n.data =  b.data;                   
                   prev.next = n;
                   n.next = a;
@@ -39,8 +38,7 @@ Node mergeLists(Node headA, Node headB) {
                }
                
            }
-           else{
-               Node n = new Node();
+           else{               
                n.data =  b.data;               
                prev.next = n;
                n.next = null;
