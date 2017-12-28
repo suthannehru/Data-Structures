@@ -1,10 +1,9 @@
 void Print(Node *head)
-{
-
-    Node *temp = (Node*)malloc(sizeof(Node));
+{  
+    Node *temp;
     temp = head;
     while(temp != NULL){
-        cout<< (*temp).data <<endl;
-        temp = (*temp).next;
-    }
+        cout<< temp->data <<endl;
+        temp = temp->next;
+    }    
 }
